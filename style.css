@@ -1,0 +1,123 @@
+/* Importar fuentes (ya está en el HTML, pero se deja por claridad) */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+
+:root {
+    --primary-color: #38A3A5; /* Verde azulado */
+    --secondary-color: #9FFFCB; /* Verde claro */
+    --dark-color: #333333; /* Gris oscuro para el fondo */
+    --text-color: #FFFFFF; /* Blanco para texto */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #444444; /* Fondo de la tarjeta */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    color: var(--text-color);
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Para hacerla circular si el logo es cuadrado */
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 0 0 15px rgba(159, 255, 203, 0.5);
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.slogan {
+    font-size: 1em;
+    color: #CCCCCC;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button i {
+    margin-right: 10px;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos específicos para los botones */
+.facebook {
+    background-color: #1877F2; /* Azul de Facebook */
+    color: white;
+}
+
+.maps {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.footer-text {
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: #999999;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 450px) {
+    .card {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .button {
+        font-size: 1em;
+    }
+}
